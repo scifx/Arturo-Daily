@@ -1,0 +1,4 @@
+line: function [] -> print repeat "-" 50
+sampleline: function [] -> print repeat sample ["-" "*"] 50
+do.times:10 -> line
+do.times:10 -> sampleline

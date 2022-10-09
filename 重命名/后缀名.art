@@ -1,0 +1,2 @@
+#!/usr/bin/art
+loop (list ".") 'x -> rename x ((extract.filename x) ++ "_oo" ++ (extract.extension x))

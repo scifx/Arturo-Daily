@@ -1,0 +1,12 @@
+end: to :string after.minutes:1 now
+
+i:new 60*1
+while [ true ] [
+    print i
+    print now
+    dec 'i
+    pause 1000
+    c: jaro end to :string now
+    print c
+    if c = 1 -> break
+]

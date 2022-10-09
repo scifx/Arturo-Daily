@@ -1,0 +1,9 @@
+#!/usr/bin/art
+a: input "查询关键词:"
+f: dialog.folder "搜索文件夹"
+ls: list.recursive f
+print size ls
+f: filter ls => [ not? contains? read & a ]
+n: size f
+print ~"找到了|n|个文件"
+print split.lines f

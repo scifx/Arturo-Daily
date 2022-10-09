@@ -1,0 +1,9 @@
+#!/usr/bin/art
+count:to :integer input "选择最大的文件数量："
+f:dialog.folder "选择文件夹"
+
+a:list.recursive f
+b:map a 'x -> volume x
+c:take sort.descending b count
+d:select a 'x [contains? c (volume x) ]
+loop d 'j [prints j ++ " size: " ++ (to :string fdiv (volume j) 1048576) ++ " MB" print []]

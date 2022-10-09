@@ -1,0 +1,2 @@
+write.binary "data" as.binary 15
+print from.binary read "data"

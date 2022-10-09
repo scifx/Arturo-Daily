@@ -1,0 +1,2 @@
+a:read.html "https://scifx.github.io"
+print a\text

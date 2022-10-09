@@ -1,0 +1,4 @@
+a:read.lines "data.txt"
+map 'a => [ drop & 5 ]
+b: join.with:"\n" a
+write "new.txt" b

@@ -1,0 +1,2 @@
+#!/usr/bin/art
+loop (list ".") 'x -> rename x ((replace (extract.basename x) "oo" "hh" ))

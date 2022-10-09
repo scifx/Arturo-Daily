@@ -1,0 +1,26 @@
+#!/usr/bin/art
+
+clean:function [y]
+[
+    a: list y
+    b:filter a 'i -> exists? i
+
+    if? (size a) = 0
+    [
+        print "清理了:" ++ (to :string y)
+        print list y
+        delete.directory y
+        inc 'n
+    ]
+    else
+    [
+        loop b 'j -> clean(j)
+    ]
+    
+]
+
+n: new 0
+f:dialog.folder "选择清理的文件夹"
+do.times:10 -> clean(f)
+print "清理了：" ++ (to :string n) ++ " 个文件夹"
+

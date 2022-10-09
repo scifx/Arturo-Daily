@@ -1,0 +1,4 @@
+a: list "."
+isfile: function [y :block ] -> filter y 'x [ not? exists? x]
+print isfile a
+;print difference a f

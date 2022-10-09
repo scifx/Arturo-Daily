@@ -1,0 +1,3 @@
+#!/usr/bin/art
+a:dialog "链接文件:"
+loop (read.json a) 'x [ try [ download x\pic ] ]

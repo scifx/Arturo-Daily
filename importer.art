@@ -1,0 +1,3 @@
+do.import {my.art}
+print sayHi 2 3
+print "done"

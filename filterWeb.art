@@ -1,0 +1,5 @@
+a: request.get "https://scifx.github.io" #[]
+a: split.lines a\body
+b: filter a 'x -> contains? x "image"
+c: join.with:"\n" difference a b
+print c

@@ -1,0 +1,4 @@
+a:[1 2 3 4]
+n:0
+s: size a
+while [n<s][print get a n inc 'n ]

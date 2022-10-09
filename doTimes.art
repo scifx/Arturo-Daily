@@ -1,0 +1,6 @@
+a: list "."
+n: size a
+
+do.times:n [
+    dec 'n
+    print get a n

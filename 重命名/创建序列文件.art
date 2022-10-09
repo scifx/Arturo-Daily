@@ -1,0 +1,2 @@
+#!/usr/bin/art
+loop 10 'x -> write ((to :string x) ++ ".jpg") ""

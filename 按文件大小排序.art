@@ -1,0 +1,24 @@
+#!/usr/bin/art
+
+define :File [name fsize][
+    init:[this\fsize: fdiv this\fsize (1024*1024)]
+    print:[ render "|this\name|\n|this\fsize| MB\n"]
+    compare:[
+    if this\fsize = that\fsize -> return 0
+    if this\fsize > that\fsize -> return 1
+    if this\fsize < that\fsize -> return neg 1
+    ]
+]
+
+count:to :integer input "选择最大的文件数量："
+f:dialog.folder "选择文件夹"
+
+li:[]
+
+a:list.recursive f
+
+loop a 'x [ 'li ++ (to :File [x (volume x)]) ]
+
+b:take (sort.descending li) count
+
+loop b 'i -> print i

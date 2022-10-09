@@ -1,0 +1,5 @@
+#!/usr/bin/art
+a:@[1..10 array.of:10 0 1..10]
+b:map a\2 => sin
+a\2:b
+write.json "data" a

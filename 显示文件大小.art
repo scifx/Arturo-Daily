@@ -1,0 +1,7 @@
+show:function [y]
+[ 
+ls:list y
+f: filter ls => [ not? exists? & ]
+loop f 'x [ prints ( x ++ " 大小: " ++ (to :string fdiv volume x 1024) ++ " " ++ "kb" ) print [] ]
+]
+show "."

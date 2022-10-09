@@ -1,0 +1,2 @@
+a: request.get "https://scifx.github.io" #[]
+write "blog.html" a\body

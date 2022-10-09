@@ -1,0 +1,2 @@
+#!/usr/bin/art
+a:request.proxy:"http://127.0.0.1:1080" "https://www.google.com" #[]

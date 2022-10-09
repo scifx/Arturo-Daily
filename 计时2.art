@@ -1,0 +1,7 @@
+end: to :string after.seconds:100 now
+i: 100
+until [
+    pause 1000
+    i: i-1
+    print i
+] [ 1 = jaro end to :string now ]

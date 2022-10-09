@@ -1,0 +1,5 @@
+#!/usr/bin/art
+a: arg
+b: as.data a
+print type b
+loop b => print
