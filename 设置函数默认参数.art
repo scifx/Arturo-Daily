@@ -1,0 +1,29 @@
+;This function can set defalut value
+default: function.inline [name value ][
+    let name (( attr name ) ?? value)
+]
+
+;We can give it a infix ,can be easy use
+alias.infix ":" 'default!
+
+foo: $[placeholder]
+[
+    ;set defalut value
+    default 'x "value0"
+    'y: "value1"
+
+    print x
+    print y
+]
+
+;No args,will return defalut value0,value1
+foo null
+;Have args,return a and b
+foo .x:"a" .y:"b" null
+
+;outputs
+
+;> value0 
+;> value1
+;> a
+;> b
